@@ -1,0 +1,94 @@
+{
+  "id": "316f3614-53d4-45ab-853f-b3ab2924517f",
+  "version": "2.0",
+  "name": "selenium-conversor-celsius-fahrenheit",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "09b282d4-0b35-4451-8cbc-454ca90fc063",
+    "name": "shouldBeConvertCelsiusToFahrenheit",
+    "commands": [{
+      "id": "e235b423-6dfd-4142-a9ab-02f3fc58b998",
+      "comment": "",
+      "command": "open",
+      "target": "/servlet-conversor-celsius-fahrenheit/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51e09145-5e46-42ab-a15f-5038addff3b5",
+      "comment": "",
+      "command": "click",
+      "target": "id=temperatura",
+      "targets": [
+        ["id=temperatura", "id"],
+        ["name=temperatura", "name"],
+        ["css=#temperatura", "css:finder"],
+        ["xpath=//input[@id='temperatura']", "xpath:attributes"],
+        ["xpath=//div[@id='container__form']/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a90087c0-cda7-4873-984e-3ceda376b23e",
+      "comment": "",
+      "command": "type",
+      "target": "id=temperatura",
+      "targets": [
+        ["id=temperatura", "id"],
+        ["name=temperatura", "name"],
+        ["css=#temperatura", "css:finder"],
+        ["xpath=//input[@id='temperatura']", "xpath:attributes"],
+        ["xpath=//div[@id='container__form']/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "100"
+    }, {
+      "id": "4a8d5ac8-734b-4fc8-ab10-5569870eaa44",
+      "comment": "",
+      "command": "click",
+      "target": "id=fahrenheit",
+      "targets": [
+        ["id=fahrenheit", "id"],
+        ["name=escala", "name"],
+        ["css=#fahrenheit", "css:finder"],
+        ["xpath=//input[@id='fahrenheit']", "xpath:attributes"],
+        ["xpath=//div[@id='container__radioGroup']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55c6ca63-a013-4e22-afac-2d2528e95851",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSubmit",
+      "targets": [
+        ["id=btnSubmit", "id"],
+        ["css=#btnSubmit", "css:finder"],
+        ["xpath=//input[@id='btnSubmit']", "xpath:attributes"],
+        ["xpath=//div[@id='container__form']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acaa3394-18e4-4f02-89ab-7ec984b3ab75",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Ao converter de Celsius para Fahrenheit o valor de 100,00, o resultado é 212,00')]", "xpath:innerText"]
+      ],
+      "value": "Ao converter de Celsius para Fahrenheit o valor de 100,00, o resultado é 212,00"
+    }]
+  }],
+  "suites": [{
+    "id": "7c9b710d-6480-41cd-977b-4646c2cf3767",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["09b282d4-0b35-4451-8cbc-454ca90fc063"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
