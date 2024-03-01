@@ -56,4 +56,49 @@ public class ConversorEscalasServletTest {
             driver.findElement(By.cssSelector("h1")).getText()
         );
     }
+    
+    @Test
+    public void shouldBeConvert212FahrenheitTo100Celsius() {
+        driver.get("http://localhost:8080/servlet-conversor-celsius-fahrenheit/");
+        driver.findElement(By.id("temperatura")).click();
+        driver.findElement(By.id("temperatura")).sendKeys("212");
+        driver.findElement(By.id("celsius")).click();
+        driver.findElement(By.id("btnSubmit")).click();
+        assertEquals(
+            "Ao converter de Fahrenheit para Celsius o valor de 212,00, o resultado é 100,00",
+            driver.findElement(By.cssSelector("h1")).getText()
+        );
+    }
+    
+    @Test
+    public void shouldBeConvertMinus12Point2CelsiusTo10Point4Fahrenheit() {
+        driver.get("http://localhost:8080/servlet-conversor-celsius-fahrenheit/");
+        driver.findElement(By.id("temperatura")).click();
+        driver.findElement(By.id("temperatura")).sendKeys("-12.2");
+        driver.findElement(By.id("fahrenheit")).click();
+        driver.findElement(By.id("btnSubmit")).click();
+        assertEquals(
+            "Ao converter de Celsius para Fahrenheit o valor de -12,20, o resultado é 10,04",
+            driver.findElement(By.cssSelector("h1")).getText()
+        );
+    }
+    
+    @Test
+    public void shouldBeConvert60FahrenheitTo15Point56Celsius() {
+        driver.get("http://localhost:8080/servlet-conversor-celsius-fahrenheit/");
+        driver.findElement(By.id("temperatura")).click();
+        driver.findElement(By.id("temperatura")).sendKeys("60");
+        driver.findElement(By.id("celsius")).click();
+        driver.findElement(By.id("btnSubmit")).click();
+        assertEquals(
+            "Ao converter de Fahrenheit para Celsius o valor de 60,00, o resultado é 15,56",
+            driver.findElement(By.cssSelector("h1")).getText()
+        );
+    }
+    
+    // TODO: remover
+    @Test
+    public void falhaPropositalmente() {
+        fail();
+    }
 }
